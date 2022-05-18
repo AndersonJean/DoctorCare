@@ -8,3 +8,11 @@ function onScroll(){
         navegacao_fixed.classList.remove('scroll');
     }
 }
+
+function open_menu(){
+    document.body.classList.add('menu-expanded');
+}
+
+function close_menu(){
+    document.body.classList.remove('menu-expanded');
+}
