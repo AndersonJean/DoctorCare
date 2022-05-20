@@ -9,6 +9,7 @@
     --brand-light : #DCE9E2;
     --bg-light : #F7F9F9;
     --nav-height : 7.2rem;
+    --brand-green-hover : #00453A;
 }
 
 *{
@@ -73,6 +74,26 @@ section .content p{
     font-size: 1.6rem;
     line-height: 150%;
 }
+
+.button{
+    padding: 1.6rem 3.2rem;
+    width: fit-content;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4rem;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem; /* espaçamento  entre os elementos, só que é mais adequado ultilizar em grid */
+    text-decoration: none;
+}
+
+
 
 img{
     max-width: 100%;
@@ -191,6 +212,12 @@ body.menu-expanded .menu{
     margin-bottom: 8rem;
 }
 
+.menu .button:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    filter: brightness(1.1);
+}
+
 body.menu-expanded .logo, body.menu-expanded button {
     position: relative;
     z-index: 100;
@@ -232,23 +259,11 @@ header::before{
     margin-bottom: 3.2rem;
 }
 
-#home button{
-    height: 6.2rem;
-    width: 26.3rem;
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 4rem;
-    margin-bottom: 6rem;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    color: var(--text-color);
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.6rem; /* espaçamento  entre os elementos, só que é mais adequado ultilizar em grid */
+#home .button{
     margin-inline: auto;
 }
+
+
 
 #home  img{
     width: 26.4rem;
@@ -329,5 +344,75 @@ nav{
     margin-top: 2.4rem;
     margin-bottom: 6rem;    
     text-align: justify;
+}
+
+/* ======== Contact ============*/
+
+#contact{
+    text-align: left;
+}
+
+#contact header{
+    margin-bottom: 3.2rem;
+}
+
+#contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+
+#contact ul li{
+    display: flex;
+    align-items: center ;
+    gap: 0.8rem;
+}
+
+footer{
+    padding-block: 6rem;
+    background-color: var(--primary-color);
+    text-align: left;
+    color: var(--text-color);
+}
+
+footer .logo{
+    margin-bottom: 2.4rem;
+    display: inline-block;
+}
+
+footer .logo svg{
+    width: 23.6rem;
+    height: 3.1rem;
+}
+
+footer .logo path{
+    fill: var(--text-color);
+}
+
+footer p{
+    color: var(--brand-beige);
+    line-height: 2;
+}
+
+footer .social_links{
+    justify-content: flex-start;
+    margin-top: 0;
+}
+
+
+/* BackToTopButton */
+
+#BackToTopButton{
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#BackToTopButton .show{
+    opacity: 1;
+    visibility: visible;
 }
 

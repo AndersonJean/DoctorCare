@@ -1,4 +1,13 @@
+window.addEventListener('scroll', onScroll);
+
+onScroll();
 function onScroll(){
+    showNavOnScroll()
+    showBackToTopButtonOnSccroll()
+}
+
+
+function showNavOnScroll(){
     const navegacao_fixed = document.querySelector('#navigation');
     if(scrollY > 0){
         navegacao_fixed.classList.add('scroll');
@@ -6,6 +15,16 @@ function onScroll(){
 
     else{
         navegacao_fixed.classList.remove('scroll');
+    }
+}
+
+function showBackToTopButtonOnSccroll(){
+    if(scrollY > 500){
+        backToTopButton.classList.add('show');
+    }
+
+    else{
+        backToTopButton.classList.remove('show');
     }
 }
 
